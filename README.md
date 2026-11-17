@@ -54,6 +54,21 @@ python -m unittest discover -s tests -v
 
 Run the notebook from the repository root in Jupyter/VS Code. Training writes `outputs/metrics.json`, an OLS summary, and charts (distribution, held-out actual vs. predicted, residuals). Generated outputs are gitignored.
 
+## Visualizations
+
+The following GitHub-friendly SVG charts were reconstructed from the verified November 2026 dataset run (the same 1,000-movie source and 200-movie holdout set):
+
+### Actual vs. predicted IMDb ratings
+![Actual vs. Predicted Ratings](images/actual_vs_predicted.svg)
+
+### Residual plot
+![Residuals](images/residuals.svg)
+
+### IMDb rating distribution
+![IMDb Rating Distribution](images/rating_distribution.svg)
+
+The `images/` charts are SVG reproductions of the Python-generated PNG figures; the source Python pipeline also saves PNG files in `outputs/` when run.
+
 ## Methodology
 
 1. Load data; clean year, votes, revenue, runtime, and critic scores as numeric variables.
