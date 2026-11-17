@@ -88,7 +88,7 @@ def plot_diagnostics(df: pd.DataFrame, actual: np.ndarray, predicted: np.ndarray
     sns.set_theme(style="whitegrid")
 
     fig, ax = plt.subplots(figsize=(8, 5))
-    sns.histplot(df[TARGET].astype(float).to_numpy(), bins=25, kde=True, ax=ax)
+    ax.hist(df[TARGET].astype(float).to_numpy(), bins=25, edgecolor="white", alpha=0.82)
     ax.set(title="IMDb rating distribution", xlabel="IMDb rating", ylabel="Movie count")
     fig.tight_layout()
     fig.savefig(output / "rating_distribution.png", dpi=160)
