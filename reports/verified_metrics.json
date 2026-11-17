@@ -1,0 +1,44 @@
+{
+  "source": "Reconstructed repository model run on uploaded Kaggle IMDb Top 1000 CSV (not the original 2025 notebook)",
+  "verified_on": "2026-11-17",
+  "dataset": "imdb_top_1000.csv",
+  "dataset_rows": 1000,
+  "original_column_count": 16,
+  "target": "IMDB_Rating",
+  "features": [
+    "Released_Year",
+    "No_of_Votes",
+    "Gross",
+    "Runtime",
+    "Meta_score"
+  ],
+  "missing_before_imputation": {
+    "Released_Year": 1,
+    "No_of_Votes": 0,
+    "Gross": 169,
+    "Runtime": 0,
+    "Meta_score": 157
+  },
+  "in_sample_ols": {
+    "r_squared": 0.4434,
+    "adjusted_r_squared": 0.4406,
+    "f_statistic": 158.3518,
+    "f_pvalue": 8.698314271011874e-124
+  },
+  "held_out_test": {
+    "test_r2": 0.2877,
+    "test_mae": 0.17,
+    "test_rmse": 0.2137,
+    "train_rows": 800,
+    "test_rows": 200,
+    "random_state": 42,
+    "test_size": 0.2
+  },
+  "historical_reported_ols": {
+    "r_squared": 0.443,
+    "adjusted_r_squared": 0.441,
+    "f_statistic": 158.4,
+    "f_pvalue": "8.70e-124"
+  },
+  "historical_scores_reproduced_to_reported_precision": true
+}
